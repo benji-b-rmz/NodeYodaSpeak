@@ -70,8 +70,7 @@
         $.ajax({
             url:'/api/yoda_speak',
             method: 'POST',
-            contentType: 'text/plain',
-            data: words,
+            data: {str: words},
             success: function(result){
                 $("#yoda-output").html(result);
             },
